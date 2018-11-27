@@ -1,11 +1,15 @@
 def get_first_name_of_season_winner(data, season)
-name = ""
-data[season.to_sym].each do |into_array|
-   if into_array[:status] =="Winner"
-     name = into_array[:name].split(" ")[0]
-   end
- end
- return name
+  data[season.to_sym].each do |person| #person is now the only ones from season
+    person.each do |key, value| #diff keys and their values
+      if value == "Winner"
+        person.each do |k, v|
+          if k == :name
+            return v.split.first
+          end
+        end
+      end
+    end
+  end
 end
 
 def get_contestant_name(data, occupation)
