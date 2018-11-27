@@ -17,8 +17,8 @@ def get_contestant_name(data, occupation)
   # code here
   data.each do |season, arr|
     arr.each do |job|
-      if job[:occupation] == occupation
-        return job[:name]
+      if job["occupation"] == occupation
+        return job["name"]
       end
     end
   end
