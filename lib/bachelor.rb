@@ -52,7 +52,7 @@ def get_average_age_for_season(data, season)
   # code here
   avg = 0
   data[season.to_sym].each do |person|
-    avg += person[:age].to_f
+    avg += person["age"].to_f
   end
   return avg / data[season.to_sym].size
 end
