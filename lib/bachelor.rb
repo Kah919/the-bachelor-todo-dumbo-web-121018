@@ -4,7 +4,7 @@ def get_first_name_of_season_winner(data, season)
       return person["name"].split.first
     end
   end
-  
+
   # data[season.to_sym].each do |person| #person is now the only ones from season
   #   person.each do |key, value| #diff keys and their values
   #     if person[key] == "Winner"
